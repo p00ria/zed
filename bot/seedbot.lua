@@ -238,7 +238,6 @@ function create_config( )
     "ECHO",
     "GODBYE",
     "INFO"
-    "JOIN",
     "LINKPV",
     "QR",
     "PLUGINS",
