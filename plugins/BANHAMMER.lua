@@ -122,7 +122,7 @@ end
 local function run(msg, matches)
  if matches[1]:lower() == 'id' then
     if msg.to.type == "user" then
-      return "Bot ID: "..msg.to.id.. "\n\nYour ID: "..msg.from.id
+      return "🤖🆔: "..msg.to.id.. "\n\nYour 🆔"..msg.from.id
     end
     if type(msg.reply_id) ~= "nil" then
       local name = user_print_name(msg.from)
@@ -152,7 +152,7 @@ local function run(msg, matches)
     if matches[2] and is_admin(msg) then
       chat_id = matches[2] 
     end
-    return ban_list(chat_id)
+    return ban_list👥(chat_id)
   end
   if matches[1]:lower() == 'ban' then-- /ban 
     if type(msg.reply_id)~="nil" and is_momod(msg) then
@@ -203,7 +203,7 @@ local function run(msg, matches)
         	redis:srem(hash, user_id)
         	local name = user_print_name(msg.from)
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return 'User '..user_id..' unbanned'
+        	return 'User '..user_id..' 🏵unbanned🏵'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -289,7 +289,7 @@ end
           	return false 
         end
        		unbanall_user(user_id)
-        	return 'User ['..user_id..' ] removed from global ban list'
+        	return 'User ['..user_id..' ] removed from🏵🏵 global 🏵ban list'
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
